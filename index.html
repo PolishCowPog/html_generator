@@ -14,14 +14,25 @@
 
     <div class="controlPanel">
         <div> <!--Background change color-->
-            <input class="changeBcColor" type="text">
-            <input class="changeBcColor_confirm" type="button" value="Change!" onclick="changeColor()">
+            <h3>Background color:</h3> <!--text, wow-->
+            <input id="changeBcColor" type="text"> <!--input value for color-->
+            <input type="button" value="Change!" onclick="changeColor()"> <!--runs javascript function on click-->
+        </div>
+
+        <div> <!--Add text-->
+            <h3>Text editor:</h3>
+            <p>Add text:</p>
+            <input id="addTextInput" type="text">
+            <input type="button" value="Add text" onclick="addText()">
         </div>
     </div>
 </div>
 
 <span class="openbtn" onclick="openNav()">Panel</span>
 
+<ul id="textList">
+    
+</ul>
 
     <script src="scripts.js"></script>
 </body>
