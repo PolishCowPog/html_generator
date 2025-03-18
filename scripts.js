@@ -23,6 +23,9 @@ function addText(){
     else{
         let li = document.createElement("li")
         li.textContent = addingText
-        document.getElementById("textList").appendChild(li)
+        document.getElementById("textList").appendChild(li).id = "li1"
     }
+}
+function removeText(){
+    
 }
