@@ -8,7 +8,7 @@ function closeNav() {
 function changeColor(){
     addingColor = document.getElementById("changeBcColor").value //Get the value of the input box
     if (CSS.supports("color", addingColor) == true){ //Check if input value is supported by css color
-        document.body.style.backgroundColor = farge; //If true change to the color
+        document.body.style.backgroundColor = addingColor; //If true change to the color
     }
     else{
         alert("Not a valid color") //If input not supported by css.
