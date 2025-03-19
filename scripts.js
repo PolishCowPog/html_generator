@@ -20,7 +20,7 @@ function ChangeColorPicker(){
 }
 
 function addText(){
-    addingText = document.getElementById("addTextInput").value
+    let addingText = document.getElementById("addTextInput").value
     if (addingText == ""){
         alert("Invalid, no input given")
     }
@@ -33,9 +33,10 @@ function addText(){
         document.getElementById("addedElements").appendChild(element).id = "addedtext"
     }
 }
+
 function removeText(){
-    let textToRemove = document.getElementById("removeTextInput").value
-    let elements = document.querySelectorAll("#addedElements")
+    let textToRemove = document.getElementById("removeTextInput").value;
+    let elements = document.querySelectorAll("#addedElements *");
 
     for (let i = 0; i < elements.length; i++) {
         if (elements[i].textContent.trim() === textToRemove.trim()) {
