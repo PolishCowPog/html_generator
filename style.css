@@ -61,3 +61,7 @@ span{
 .controlPanel{
     padding-left: 30px;
 }
+
+#addedtext{
+    color: #d00000;
+}

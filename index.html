@@ -17,6 +17,7 @@
             <h3>Background color:</h3> <!--text, wow-->
             <input id="changeBcColor" type="text"> <!--input value for color-->
             <input type="button" value="Change!" onclick="changeColor()"> <!--runs javascript function on click-->
+            <input type="color" name="" id="colorPicker" onchange="ChangeColorPicker()">
         </div>
 
         <div> <!--Add text-->
@@ -24,19 +25,25 @@
             <p>Add text:</p>
             <input id="addTextInput" type="text">
             <input type="button" value="Add text" onclick="addText()">
+            <p></p>
+            <input id="removeTextInput" type="text">
             <input type="button" value="Remove text" onclick="removeText()">
         </div>
         <div> <!--Add elements-->
-            input
+            <h3>Select element:</h3>
+            <select name="Elements" id="selectElement">
+                <option value="p">p     (text)</option>
+                <option value="h1">h1   (Title)</option>
+                <option value="h2">h2   (Mini Title)</option>
+                <option value="h3">h3   (Mini Title 2)</option>
+                <option value="ul">ul   (Unlisted list)</option>
+                <option value="li">li   (list)</option>
+            </select>
         </div>
     </div>
 </div>
 
 <span class="openbtn" onclick="openNav()">Panel</span>
-
-<ul id="textList">
-    
-</ul>
 
 <div id="addedElements">
 

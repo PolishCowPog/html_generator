@@ -14,6 +14,10 @@ function changeColor(){
         alert("Not a valid color") //If input not supported by css.
     }
 }
+function ChangeColorPicker(){
+    addingColor2 = document.getElementById("colorPicker").value
+    document.body.style.backgroundColor = addingColor2
+}
 
 function addText(){
     addingText = document.getElementById("addTextInput").value
@@ -21,11 +25,22 @@ function addText(){
         alert("Invalid, no input given")
     }
     else{
-        let li = document.createElement("li")
-        li.textContent = addingText
-        document.getElementById("textList").appendChild(li).id = "li1"
+        let selectedElement = document.getElementById("selectElement").value
+        let element = document.createElement(selectedElement)
+        element.textContent = addingText
+
+        element.setAttribute("data-added-text", addingText);
+        document.getElementById("addedElements").appendChild(element).id = "addedtext"
     }
 }
 function removeText(){
-    
+    let textToRemove = document.getElementById("removeTextInput").value
+    let elements = document.querySelectorAll("#addedElements")
+
+    for (let i = 0; i < elements.length; i++) {
+        if (elements[i].textContent.trim() === textToRemove.trim()) {
+            elements[i].remove();
+            break;
+        }
+    }
 }
