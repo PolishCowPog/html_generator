@@ -60,3 +60,20 @@ function changeFont(){
         }
     }
 }
+
+function fontSizeDisplay(){
+    document.getElementById("fontSizeDisplay").innerHTML = document.getElementById("FontSize").value + "px"
+}
+
+function changeFontSize(){
+
+    let textToChange = document.getElementById("changeFontSizeInput").value;
+    let elements = document.querySelectorAll("#addedElements *");
+
+    for (let i = 0; i < elements.length; i++) {
+        if (elements[i].textContent.trim() === textToChange.trim()) {
+            elements[i].style.fontSize = document.getElementById("FontSize").value + "px";
+            break;
+        }
+    }
+}

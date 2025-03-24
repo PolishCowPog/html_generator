@@ -17,7 +17,7 @@
             <h3>Background color:</h3> <!--text, wow-->
             <input id="changeBcColor" type="text"> <!--input value for color-->
             <input type="button" value="Change!" onclick="changeColor()"> <!--runs javascript function on click-->
-            <input type="color" name="" id="colorPicker" onchange="ChangeColorPicker()">
+            <input type="color" name="" id="colorPicker" oninput="ChangeColorPicker()">
         </div>
 
         <br>
@@ -61,6 +61,15 @@
             <p>Write the exact phrase of the element you want to change font of. select font and press button.</p>
             <input type="text" id="changeFontInput">
             <input type="button" value="Change font" onclick="changeFont()">
+        </div>
+
+        <br>
+
+        <div> <!--Change size-->
+            <h3>Change size</h3>
+            <input type="text" id="changeFontSizeInput">
+            <input type="range" name="FontSize" id="FontSize" min="1" max="100" oninput="fontSizeDisplay()" onchange="changeFontSize()">
+            <p id="fontSizeDisplay">0px</p>
         </div>
     </div>
 </div>
