@@ -45,3 +45,18 @@ function removeText(){
         }
     }
 }
+
+
+function changeFont(){
+    selectedFont = document.getElementById("selectFont").value
+
+    let textToChange = document.getElementById("changeFontInput").value;
+    let elements = document.querySelectorAll("#addedElements *");
+
+    for (let i = 0; i < elements.length; i++) {
+        if (elements[i].textContent.trim() === textToChange.trim() && elements[i].style.fontFamily !== selectedFont) {
+            elements[i].style.fontFamily = selectedFont;
+            break;
+        }
+    }
+}

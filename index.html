@@ -20,17 +20,25 @@
             <input type="color" name="" id="colorPicker" onchange="ChangeColorPicker()">
         </div>
 
+        <br>
+
         <div> <!--Add text-->
             <h3>Text editor:</h3>
             <p>Add text:</p>
             <input id="addTextInput" type="text">
             <input type="button" value="Add text" onclick="addText()">
-            <p></p>
+            <br>
+            <br>
+            <p>Remove text by typing the exact text of the element.</p>
             <input id="removeTextInput" type="text">
             <input type="button" value="Remove text" onclick="removeText()">
         </div>
+
+        <br>
+
         <div> <!--Add elements-->
             <h3>Select element:</h3>
+            <p>Select element. Next added text will be in the selected element.</p>
             <select name="Elements" id="selectElement">
                 <option value="p">p     (text)</option>
                 <option value="h1">h1   (Title)</option>
@@ -40,10 +48,24 @@
                 <option value="li">li   (list)</option>
             </select>
         </div>
+
+        <br>
+
+        <div> <!--Change Font-->
+            <h3>Change font:</h3>
+            <select name="fonts" id="selectFont">
+                <option value="sans-serif">Sans Serif</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="fantasy">Fantasy</option>
+            </select>
+            <p>Write the exact phrase of the element you want to change font of. select font and press button.</p>
+            <input type="text" id="changeFontInput">
+            <input type="button" value="Change font" onclick="changeFont()">
+        </div>
     </div>
 </div>
 
-<span class="openbtn" onclick="openNav()">Panel</span>
+<span class="openbtn" onclick="openNav()">Click to open Panel</span>
 
 <div id="addedElements">
 
